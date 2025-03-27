@@ -2,6 +2,12 @@
 
 ## Usage
 
+Check unit tests:
+
+```
+pixi run test
+```
+
 Build and open the docs:
 
 ```console
