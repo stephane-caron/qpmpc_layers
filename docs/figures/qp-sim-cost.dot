@@ -1,0 +1,28 @@
+// SPDX-License-Identifier: Apache-2.0
+// Copyright 2025 Inria
+
+digraph qp_sim_cost {
+    bgcolor="transparent"
+    rankdir="LR";
+    splines=ortho;  // Disable splines for straight edges
+
+    graph [ranksep=1, nodesep=0.5];
+    node [shape=point] theta, x0, ell;
+    node [shape=square];
+
+    QP[label="QP"];
+    sim[label="sim"];
+    cost[label="cost"];
+
+    {rank=1; QP};
+    {rank=2; sim};
+    {rank=3; cost};
+
+    theta->QP[xlabel="θ"];
+    x0->QP[xlabel="x₀"];
+    x0->sim[xlabel="x₀"];
+    QP->sim[xlabel="U*"];
+    QP->cost[xlabel="X"];
+    sim->cost[xlabel="X*"];
+    cost->ell[xlabel="ℓ"];
+}
