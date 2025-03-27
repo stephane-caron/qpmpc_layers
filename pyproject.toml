@@ -1,0 +1,112 @@
+[project]
+name = "qpmpc_layers"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Stéphane Caron", email = "stephane.caron@normalesup.org"},
+]
+maintainers = [
+    {name = "Stéphane Caron", email = "stephane.caron@normalesup.org"},
+]
+dynamic = ['version', 'description']
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "qpsolvers >=1.8.0",
+]
+keywords = ["model", "predictive", "control", "linear", "time-varying"]
+
+[project.optional-dependencies]
+coverage = [
+    "pytest-cov",
+]
+docs = [
+    "sphinx >= 8.0.0",
+    "sphinx-autodoc-typehints",
+    "sphinx-material",
+    "sphinx-mathjax-offline",
+]
+lint = ["ruff"]
+test = ["pytest"]
+
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+name = "qpmpc_layers"
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["linux-64", "linux-aarch64", "osx-arm64"]
+
+[tool.pixi.dependencies]
+proxsuite = ">=0.6.1"
+pytorch = ">=2.4.1"
+valmix = "*"
+
+[tool.pixi.pypi-dependencies]
+qpmpc_layers = { path = ".", editable = true }
+
+[tool.pixi.feature.coverage.tasks]
+coverage = "pytest --cov=qpmpc_layers --cov-report=html"
+coverageopen = { cmd = "xdg-open htmlcov/index.html", depends-on = "coverage" }
+
+[tool.pixi.feature.docs.tasks]
+figures = "cd docs && make"
+docs = { cmd = "sphinx-build docs/ docs/_build -W", depends-on = "figures" }
+docsopen = { cmd = "xdg-open docs/_build/index.html", depends-on = "docs" }
+
+[tool.pixi.feature.lint.tasks]
+lint = "ruff check qpmpc_layers"
+
+[tool.pixi.feature.pack.dependencies]
+pixi-pack = "*"
+
+[tool.pixi.feature.pack.tasks]
+pack-to-aarch64 = "pixi-pack pack -e default --platform linux-aarch64 --ignore-pypi-errors"
+
+[tool.pixi.feature.test.tasks]
+test = "pytest ."
+
+[tool.pixi.environments]
+coverage = { features = ["coverage"], solve-group = "default" }
+default = { features = [], solve-group = "default" }
+docs = { features = ["docs"], solve-group = "default" }
+lint = { features = ["lint"], solve-group = "default" }
+pack = { features = ["pack"], solve-group = "default" }
+test = { features = ["test"], solve-group = "default" }
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+lint.select = [
+    # pyflakes
+    "F",
+    # pycodestyle
+    "E",
+    "W",
+    # isort
+    "I001",
+    # pydocstyle
+    "D"
+]
+ignore = [
+    "D401",  # good for methods but not for class docstrings
+    "D405",  # British-style section names are also "proper"!
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
