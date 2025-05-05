@@ -1,11 +1,7 @@
-name: qpmpcdoc
+name: qpmpc_layers
 channels:
     - conda-forge
 dependencies:
-    - python = 3.10
-    - pip >= 21.3.1
-    - sphinx >= 8.0.0
-    - pip:
-        - sphinx-autodoc-typehints
-        - sphinx-material
-        - sphinx-mathjax-offline
+    - proxsuite >=0.6.1
+    - pytorch >=2.4.1
+    - valmix

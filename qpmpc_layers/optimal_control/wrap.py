@@ -16,7 +16,7 @@ from ..types import QP
 class Wrap(nn.Module):
     r"""Set the initial state constraint to complete an OCP."""
 
-    def __init__(self, state_dim: int, reg : int = 1e-8 , sr: int = 1e-3) -> None:
+    def __init__(self, state_dim: int) -> None:
         """Initialize module.
 
         Args:
@@ -24,8 +24,7 @@ class Wrap(nn.Module):
         """
         super().__init__()
         self.state_dim = state_dim
-        self.reg = reg
-        self.sr = sr
+
     def forward(self, prev: QP, x_init: torch.Tensor) -> QP:
         """Forward calculation of the wrapping step.
 
@@ -44,30 +43,12 @@ class Wrap(nn.Module):
             [torch.eye(nx), torch.zeros((nx, ntau - nx))],
             dim=1,
         )
-        A = torch.cat([prev.A, A_init])
-        b = torch.cat([prev.b, x_init])
-        if self.sr is not None and self.reg is not None :
-            return self.add_slack_variable(prev.H, prev.g, A, b, prev.C, prev.l, prev.u)
-        else :
-            return QP(
-                H=prev.H,
-                g=prev.g,
-                A=A,
-                b=b,
-                C=prev.C,
-                l=prev.l,
-                u=prev.u,
-            )
-    def add_slack_variable(self, H,g,A,b,C,l,u):
-        n, m = H.shape[0], C.shape[0]
-        H2 = torch.block_diag(*[H ,+self.reg*torch.eye(2*m) ])
-        g2 = torch.cat([g, self.sr*torch.ones(m), -self.sr*torch.ones(m)])
-        A2 = torch.block_diag(*[A, torch.zeros(2*m,2*m)])
-        b2 = torch.cat([b, torch.zeros(2*m)])
-        C2 = torch.cat([C,C,torch.zeros(2*C.shape[0], C.shape[1])],0)
-        E = torch.cat([-torch.eye(2*m), torch.eye(2*m)])
-        C2 = torch.cat([C2,E],1)
-        l2 = torch.cat([torch.zeros(m), l , -1e8 * torch.ones(m) , torch.zeros(m)])
-        u2 = torch.cat([u, torch.zeros(2*m), 1e8*torch.ones(m)])
-        print(g2.shape, A2.shape,b2.shape, H2.shape, C2.shape, l2.shape ,u2.shape)
-        return QP(H=H2, g= g2 , A = A2 , b= b2, C=C2, l = l2, u=u2)
+        return QP(
+            H=prev.H,
+            g=prev.g,
+            A=torch.cat([prev.A, A_init]),
+            b=torch.cat([prev.b, x_init]),
+            C=prev.C,
+            l=prev.l,
+            u=prev.u,
+        )
