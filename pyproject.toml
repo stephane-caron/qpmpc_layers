@@ -75,7 +75,7 @@ lint = "ruff check qpmpc_layers"
 pixi-pack = "*"
 
 [tool.pixi.feature.pack.tasks]
-pack-to-aarch64 = "pixi-pack pack -e default --platform linux-aarch64 --ignore-pypi-errors"
+pack-to-aarch64 = "pixi-pack pack -e default --platform linux-aarch64 --ignore-pypi-non-wheel"
 
 [tool.pixi.feature.test.tasks]
 test = "pytest ."
