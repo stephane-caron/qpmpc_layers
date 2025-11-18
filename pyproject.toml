@@ -25,8 +25,8 @@ classifiers = [
 ]
 dependencies = [
     "proxsuite >=0.6.1",
-    "pytorch >=2.4.1",
     "qpsolvers >=1.8.0",
+    "torch >=2.4.1",
 ]
 keywords = ["differentiable", "model", "predictive", "control", "linear", "time-varying"]
 
