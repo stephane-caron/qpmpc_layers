@@ -39,10 +39,9 @@ name = "qpmpc_layers"
 
 [tool.pixi.project]
 channels = ["conda-forge"]
-platforms = ["linux-64", "linux-aarch64", "osx-arm64"]
+platforms = ["linux-64", "linux-aarch64"]
 
 [tool.pixi.dependencies]
-python = "<3.12"  # for ProxSuite PyPI wheels
 valmix = "*"
 
 [tool.pixi.pypi-dependencies]
@@ -89,6 +88,12 @@ setuptools = "*"
 [tool.pixi.feature.py311.dependencies]
 python = "3.11.*"
 
+[tool.pixi.feature.py312.dependencies]
+python = "3.12.*"
+
+[tool.pixi.feature.py313.dependencies]
+python = "3.13.*"
+
 [tool.pixi.feature.test.dependencies]
 pytest = "*"
 
@@ -102,6 +107,8 @@ docs = { features = ["docs"], solve-group = "default" }
 lint = { features = ["lint"], solve-group = "default" }
 py310 = { features = ["py310", "test"], solve-group = "py310" }
 py311 = { features = ["py311", "test"], solve-group = "py311" }
+py312 = { features = ["py312", "test"], solve-group = "py312" }
+py313 = { features = ["py313", "test"], solve-group = "py313" }
 py39 = { features = ["py39", "test"], solve-group = "py39" }
 
 [tool.ruff]
