@@ -1,15 +1,13 @@
 # qpmpc\_layers
 
-## Usage
+Differentiable linear model predictive control in Python, for optimal-control problems that are quadratic programs. This library revisits [qpmpc](https://github.com/stephane-caron/qpmpc) with a new API better suited to [PyTorch](https://pytorch.org/), and builds upon [QPLayer](https://github.com/Simple-Robotics/proxsuite?tab=readme-ov-file#qplayer) to solve QPs as part of PyTorch computation graphs.
 
-Check unit tests:
+> [!WARNING]
+> qpmc\_layers is at the alpha stage of its development.
 
-```
-pixi run test
-```
+Expect breaking changes and missing features, but feel also free to join the discussion or add work-in-progress examples at this stage.
 
-Build and open the docs:
+## Development
 
-```console
-pixi run docsopen
-```
+- Checking unit tests: ``pixi run test``
+- Building and opening the documentation locally: ``pixi run docsopen``
