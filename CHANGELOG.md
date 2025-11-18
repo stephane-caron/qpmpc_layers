@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Initial version of the library
+- CICD: Add GitHub Actions workflows
 - examples: 1D car
 - examples: PI balancer tuning
 - examples: Triple-integrator forward step
