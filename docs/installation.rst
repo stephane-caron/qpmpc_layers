@@ -4,4 +4,4 @@ Installation
 
 .. code:: bash
 
-    pip install qpmpc
+    pip install qpmpc_layers
