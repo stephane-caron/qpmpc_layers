@@ -71,6 +71,7 @@ class Constraint:
 
     @property
     def dtype(self) -> torch.dtype:
+        """Get the PyTorch datatype of the constraint tensors."""
         check_dtypes(self, ["C", "D", "e", "f"])
         return self.C.dtype
 

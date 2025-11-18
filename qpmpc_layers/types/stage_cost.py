@@ -73,5 +73,6 @@ class StageCost:
 
     @property
     def dtype(self) -> torch.dtype:
+        """Get the PyTorch datatype of the stage cost tensors."""
         check_dtypes(self, ["Q", "R", "q", "r"])
         return self.Q.dtype

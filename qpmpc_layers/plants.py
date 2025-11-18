@@ -16,10 +16,20 @@ class DoubleIntegrator(nn.Module):
     """Double integrator dynamics with timestep as a parameter."""
 
     def __init__(self, T: float):
+        """Initialize integrator from its timestep.
+
+        Args:
+            T: Integrator timestep in seconds.
+        """
         super().__init__()
         self.T = nn.Parameter(torch.tensor([T]))
 
     def forward(self) -> Dynamics:
+        """Compute the dynamics of the double integrator.
+
+        Returns:
+            Dynamics of the double integrator.
+        """
         _1 = torch.ones(1, dtype=self.T.dtype)
         _0 = torch.zeros(1, dtype=self.T.dtype)
         _T = self.T
@@ -43,10 +53,20 @@ class TripleIntegrator(nn.Module):
     """Triple integrator dynamics with timestep as a parameter."""
 
     def __init__(self, T: float):
+        """Initialize integrator from its timestep.
+
+        Args:
+            T: Integrator timestep in seconds.
+        """
         super().__init__()
         self.T = nn.Parameter(torch.tensor([T]))
 
     def forward(self) -> Dynamics:
+        """Compute the dynamics of the triple integrator.
+
+        Returns:
+            Dynamics of the triple integrator.
+        """
         _1 = torch.ones(1, dtype=self.T.dtype)
         _0 = torch.zeros(1, dtype=self.T.dtype)
         _T = self.T
@@ -80,12 +100,24 @@ class LinearizedWheeledInvertedPendulum(nn.Module):
     """
 
     def __init__(self, length: float, T: float, gravity: float = 9.81):
+        """Define wheeled inverted pendulum model from its parameters.
+
+        Args:
+            length: Length of the pendulum.
+            T: Integration timestep in seconds.
+            gravity: Gravity constant in m/s².
+        """
         super().__init__()
         self.gravity = gravity
         self.length = nn.Parameter(torch.tensor([length]))
         self.T = nn.Parameter(torch.tensor([T]))
 
     def forward(self) -> Dynamics:
+        """Compute the dynamics of the linearized wheeled inverted pendulum.
+
+        Returns:
+            Dynamics of the linearized wheeled inverted pendulum.
+        """
         _1 = torch.ones(1, dtype=self.T.dtype)
         _0 = torch.zeros(1, dtype=self.T.dtype)
         _T = self.T

@@ -52,5 +52,6 @@ class Dynamics:
 
     @property
     def dtype(self) -> torch.dtype:
+        """Get the PyTorch datatype of the dynamics step tensors."""
         check_dtypes(self, ["A", "B"])
         return self.A.dtype
