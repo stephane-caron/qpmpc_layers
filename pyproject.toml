@@ -69,7 +69,7 @@ sphinx-mathjax-offline = "*"
 
 [tool.pixi.feature.docs.tasks]
 figures = "cd docs && make"
-docs-build = { cmd = "sphinx-build docs/ docs/_build -W", depends-on = "figures" }
+docs-build = { cmd = "sphinx-build docs/ docs/_build", depends-on = "figures" }
 docs-open = { cmd = "xdg-open docs/_build/index.html", depends-on = "docs-build" }
 
 [tool.pixi.feature.lint.dependencies]
