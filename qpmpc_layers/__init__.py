@@ -9,7 +9,7 @@
 from .qplayer import QPLayer
 from .types import QP, Constraint, Dynamics, StageCost, TerminalCost
 
-__version__ = "4.0.0"
+__version__ = "0.0.1"
 
 __all__ = [
     "Constraint",
