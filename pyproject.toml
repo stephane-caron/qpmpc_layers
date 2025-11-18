@@ -37,7 +37,7 @@ build-backend = "flit_core.buildapi"
 [tool.flit.module]
 name = "qpmpc_layers"
 
-[tool.pixi.project]
+[tool.pixi.workspace]
 channels = ["conda-forge"]
 platforms = ["linux-64", "linux-aarch64"]
 
