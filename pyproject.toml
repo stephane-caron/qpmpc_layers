@@ -3,7 +3,8 @@ name = "qpmpc_layers"
 readme = "README.md"
 license = {file = "LICENSE"}
 authors = [
-    {name = "Stéphane Caron", email = "stephane.caron@normalesup.org"},
+    {name = "Stéphane Caron", email = "stephane.caron@inria.fr"},
+    {name = "Valentin Tordjman--Levavasseur", email = "valentin.tordjman-levavasseur@inria.fr"},
 ]
 maintainers = [
     {name = "Stéphane Caron", email = "stephane.caron@normalesup.org"},
