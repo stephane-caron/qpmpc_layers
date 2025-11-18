@@ -49,12 +49,14 @@ valmix = "*"
 qpmpc_layers = { path = ".", editable = true }
 
 [tool.pixi.feature.coverage.dependencies]
+coveralls = ">=4.0.0"
 pytest = "*"
 pytest-cov = "*"
 
 [tool.pixi.feature.coverage.tasks]
 coverage = "pytest --cov=qpmpc_layers --cov-report=html"
 coverage-open = { cmd = "xdg-open htmlcov/index.html", depends-on = "coverage" }
+coveralls = { cmd = "coveralls --service=github", depends-on = "coverage" }
 
 [tool.pixi.feature.docs.dependencies]
 sphinx = ">=8.0.0"
