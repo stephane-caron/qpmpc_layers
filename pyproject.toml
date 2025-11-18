@@ -75,12 +75,6 @@ ruff = "*"
 [tool.pixi.feature.lint.tasks]
 lint = "ruff check qpmpc_layers"
 
-[tool.pixi.feature.pack.dependencies]
-pixi-pack = "*"
-
-[tool.pixi.feature.pack.tasks]
-pack-to-aarch64 = "pixi-pack pack -e default --platform linux-aarch64 --ignore-pypi-non-wheel"
-
 [tool.pixi.feature.test.dependencies]
 pytest = "*"
 
@@ -92,7 +86,6 @@ coverage = { features = ["coverage"], solve-group = "default" }
 default = { features = [], solve-group = "default" }
 docs = { features = ["docs"], solve-group = "default" }
 lint = { features = ["lint"], solve-group = "default" }
-pack = { features = ["pack"], solve-group = "default" }
 test = { features = ["test"], solve-group = "default" }
 
 [tool.ruff]
