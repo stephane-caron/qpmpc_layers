@@ -17,7 +17,7 @@
 .pytest_cache/
 .pytype/
 .ropeproject
-.tox/
 __pycache__
-__pycache__/
-_build/
+__pycache__
+_build
+dist
