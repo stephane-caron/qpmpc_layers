@@ -75,6 +75,18 @@ ruff = "*"
 [tool.pixi.feature.lint.tasks]
 lint = "ruff check qpmpc_layers"
 
+[tool.pixi.feature.py39.dependencies]
+python = "3.9.*"
+
+[tool.pixi.feature.py310.dependencies]
+python = "3.10.*"
+
+[tool.pixi.feature.py310.pypi-dependencies]
+setuptools = "*"
+
+[tool.pixi.feature.py311.dependencies]
+python = "3.11.*"
+
 [tool.pixi.feature.test.dependencies]
 pytest = "*"
 
@@ -86,7 +98,9 @@ coverage = { features = ["coverage"], solve-group = "default" }
 default = { features = [], solve-group = "default" }
 docs = { features = ["docs"], solve-group = "default" }
 lint = { features = ["lint"], solve-group = "default" }
-test = { features = ["test"], solve-group = "default" }
+test-py310 = { features = ["py310", "test"], solve-group = "py310" }
+test-py311 = { features = ["py311", "test"], solve-group = "py311" }
+test-py39 = { features = ["py39", "test"], solve-group = "py39" }
 
 [tool.ruff]
 line-length = 79
