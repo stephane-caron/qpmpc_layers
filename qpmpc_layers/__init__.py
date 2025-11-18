@@ -7,7 +7,7 @@
 """QP-based model predictive control layers in PyTorch."""
 
 from .qplayer import QPLayer
-from .types import QP, Constraint, Dynamics, TerminalCost, StageCost
+from .types import QP, Constraint, Dynamics, StageCost, TerminalCost
 
 __version__ = "4.0.0"
 
