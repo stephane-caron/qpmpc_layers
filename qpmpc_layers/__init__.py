@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 # Copyright 2025 Inria
 
-"""QP-based model predictive control layers in PyTorch."""
+"""Differentiable linear model predictive control in Python."""
 
 from .qplayer import QPLayer
 from .types import QP, Constraint, Dynamics, StageCost, TerminalCost
