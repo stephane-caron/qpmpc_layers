@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>Module &#8212; qpmpc_layers</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=75810a84" />
+    <link rel="stylesheet" type="text/css" href="_static/material.css?v=79c92029" />
+    <script src="_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="_static/mathjax/tex-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Developer notes" href="developer-notes.html" />
+    <link rel="prev" title="Layers" href="layers.html" />
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=green data-md-color-accent=cyan>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#module" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="index.html" title="qpmpc_layers"
+           class="md-header-nav__button md-logo">
+          
+            &nbsp;
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">qpmpc_layers</span>
+          <span class="md-header-nav__topic"> Module </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            <a href="https://github.com/stephane-caron/qpmpc/" title="Go to repository" class="md-source" data-md-source="github">
+
+    <div class="md-source__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="28" height="28">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    qpmpc
+  </div>
+</a>
+          </div>
+        </div>
+      
+      
+  
+  <script src="_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = ""versions.json"",
+        target_loc = "../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="index.html" class="md-tabs__link">qpmpc_layers</a></li>
+            
+            <li class="md-tabs__item"><a href="index.html" class="md-tabs__link">Index</a></li>
+            
+            <li class="md-tabs__item"><a href="#" class="md-tabs__link">Module</a></li>
+            
+            <li class="md-tabs__item"><a href="usage.html" class="md-tabs__link">Usage</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="index.html" title="qpmpc_layers" class="md-nav__button md-logo">
+      
+        <img src="_static/" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="index.html"
+       title="qpmpc_layers">qpmpc_layers</a>
+  </label>
+    <div class="md-nav__source">
+      <a href="https://github.com/stephane-caron/qpmpc/" title="Go to repository" class="md-source" data-md-source="github">
+
+    <div class="md-source__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="28" height="28">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    qpmpc
+  </div>
+</a>
+    </div>
+  
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">Getting started</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="installation.html" class="md-nav__link">Installation</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="usage.html" class="md-nav__link">Usage</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="examples.html" class="md-nav__link">Examples</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">API documentation</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="layers.html" class="md-nav__link">Layers</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <label class="md-nav__link md-nav__link--active" for="__toc"> Module </label>
+    
+      <a href="#" class="md-nav__link md-nav__link--active">Module</a>
+      
+        
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#module--page-root" class="md-nav__link">Module</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#module-qpmpc_layers.optimal_control" class="md-nav__link">Optimal control layers</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Start" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Start</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Start.dtype" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Start.dtype</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Start.state_dim" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Start.state_dim</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Start.forward" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Start.forward()</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Step" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Step</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Step.cost" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Step.cost</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Step.dynamics" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Step.dynamics</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Step.constraint" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Step.constraint</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Step.forward" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Step.forward()</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Terminate" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Terminate</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Terminate.cost" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Terminate.cost</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Terminate.forward" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Terminate.forward()</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Wrap" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Wrap</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Wrap.forward" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Wrap.forward()</span></code></a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-qpmpc_layers.lti" class="md-nav__link">Linear time-invariant systems</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.lti.Integrator" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Integrator</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.lti.Integrator.dynamics" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Integrator.dynamics</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.lti.Integrator.forward" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Integrator.forward()</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.lti.OptimalControlProblem" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">OptimalControlProblem</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.lti.OptimalControlProblem.constraint" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">OptimalControlProblem.constraint</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.lti.OptimalControlProblem.dynamics" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">OptimalControlProblem.dynamics</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.lti.OptimalControlProblem.stage_cost" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">OptimalControlProblem.stage_cost</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.lti.OptimalControlProblem.terminal_cost" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">OptimalControlProblem.terminal_cost</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.lti.OptimalControlProblem.forward" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">OptimalControlProblem.forward()</span></code></a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-qpmpc_layers.types" class="md-nav__link">Types</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Constraint" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Constraint</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Constraint.C" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Constraint.C</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Constraint.D" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Constraint.D</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Constraint.e" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Constraint.e</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Constraint.f" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Constraint.f</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Constraint.dtype" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Constraint.dtype</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Constraint.size" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Constraint.size</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Dynamics" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Dynamics</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Dynamics.A" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Dynamics.A</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Dynamics.B" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Dynamics.B</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Dynamics.dtype" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Dynamics.dtype</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.IntegrationMap" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IntegrationMap</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.IntegrationMap.Phi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IntegrationMap.Phi</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.IntegrationMap.Psi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IntegrationMap.Psi</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.IntegrationMap.phi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IntegrationMap.phi</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.IntegrationMap.psi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IntegrationMap.psi</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.QP" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">QP</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.QP.H" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">QP.H</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.QP.g" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">QP.g</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.QP.A" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">QP.A</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.QP.b" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">QP.b</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.QP.C" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">QP.C</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.QP.l" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">QP.l</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.QP.u" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">QP.u</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.QP.unpack" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">QP.unpack()</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.StageCost" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">StageCost</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.StageCost.Q" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">StageCost.Q</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.StageCost.R" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">StageCost.R</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.StageCost.q" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">StageCost.q</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.StageCost.r" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">StageCost.r</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.StageCost.dtype" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">StageCost.dtype</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.TerminalCost" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">TerminalCost</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.TerminalCost.Q" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">TerminalCost.Q</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.TerminalCost.q" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">TerminalCost.q</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.TerminalCost.dtype" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">TerminalCost.dtype</span></code></a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+  </ul>
+</nav>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="developer-notes.html" class="md-nav__link">Developer notes</a>
+      
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#module--page-root" class="md-nav__link">Module</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#module-qpmpc_layers.optimal_control" class="md-nav__link">Optimal control layers</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Start" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Start</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Start.dtype" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Start.dtype</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Start.state_dim" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Start.state_dim</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Start.forward" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Start.forward()</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Step" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Step</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Step.cost" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Step.cost</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Step.dynamics" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Step.dynamics</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Step.constraint" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Step.constraint</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Step.forward" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Step.forward()</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Terminate" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Terminate</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Terminate.cost" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Terminate.cost</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Terminate.forward" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Terminate.forward()</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Wrap" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Wrap</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.optimal_control.Wrap.forward" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Wrap.forward()</span></code></a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-qpmpc_layers.lti" class="md-nav__link">Linear time-invariant systems</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.lti.Integrator" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Integrator</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.lti.Integrator.dynamics" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Integrator.dynamics</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.lti.Integrator.forward" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Integrator.forward()</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.lti.OptimalControlProblem" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">OptimalControlProblem</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.lti.OptimalControlProblem.constraint" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">OptimalControlProblem.constraint</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.lti.OptimalControlProblem.dynamics" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">OptimalControlProblem.dynamics</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.lti.OptimalControlProblem.stage_cost" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">OptimalControlProblem.stage_cost</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.lti.OptimalControlProblem.terminal_cost" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">OptimalControlProblem.terminal_cost</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.lti.OptimalControlProblem.forward" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">OptimalControlProblem.forward()</span></code></a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-qpmpc_layers.types" class="md-nav__link">Types</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Constraint" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Constraint</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Constraint.C" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Constraint.C</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Constraint.D" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Constraint.D</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Constraint.e" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Constraint.e</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Constraint.f" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Constraint.f</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Constraint.dtype" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Constraint.dtype</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Constraint.size" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Constraint.size</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Dynamics" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Dynamics</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Dynamics.A" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Dynamics.A</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Dynamics.B" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Dynamics.B</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.Dynamics.dtype" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Dynamics.dtype</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.IntegrationMap" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IntegrationMap</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.IntegrationMap.Phi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IntegrationMap.Phi</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.IntegrationMap.Psi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IntegrationMap.Psi</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.IntegrationMap.phi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IntegrationMap.phi</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.IntegrationMap.psi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IntegrationMap.psi</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.QP" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">QP</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.QP.H" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">QP.H</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.QP.g" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">QP.g</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.QP.A" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">QP.A</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.QP.b" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">QP.b</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.QP.C" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">QP.C</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.QP.l" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">QP.l</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.QP.u" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">QP.u</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.QP.unpack" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">QP.unpack()</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.StageCost" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">StageCost</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.StageCost.Q" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">StageCost.Q</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.StageCost.R" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">StageCost.R</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.StageCost.q" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">StageCost.q</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.StageCost.r" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">StageCost.r</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.StageCost.dtype" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">StageCost.dtype</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.TerminalCost" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">TerminalCost</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.TerminalCost.Q" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">TerminalCost.Q</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.TerminalCost.q" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">TerminalCost.q</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#qpmpc_layers.types.TerminalCost.dtype" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">TerminalCost.dtype</span></code></a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <section id="module">
+<h1 id="module--page-root">Module<a class="headerlink" href="#module--page-root" title="Link to this heading">¶</a></h1>
+<section id="module-qpmpc_layers.optimal_control">
+<span id="optimal-control-layers"></span><h2 id="module-qpmpc_layers.optimal_control">Optimal control layers<a class="headerlink" href="#module-qpmpc_layers.optimal_control" title="Link to this heading">¶</a></h2>
+<p>Optimal control problem formulation layers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="qpmpc_layers.optimal_control.Start">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qpmpc_layers.optimal_control.</span></span><span class="sig-name descname"><span class="pre">Start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qpmpc_layers.optimal_control.Start" title="Link to this definition">¶</a></dt>
+<dd><p>First layer of an optimal control problem (OCP) graph.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.optimal_control.Start.dtype">
+<span class="sig-name descname"><span class="pre">dtype</span></span><a class="headerlink" href="#qpmpc_layers.optimal_control.Start.dtype" title="Link to this definition">¶</a></dt>
+<dd><p>Desired data type of intermediate tensors.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.optimal_control.Start.state_dim">
+<span class="sig-name descname"><span class="pre">state_dim</span></span><a class="headerlink" href="#qpmpc_layers.optimal_control.Start.state_dim" title="Link to this definition">¶</a></dt>
+<dd><p>Dimension of the state space.</p>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="qpmpc_layers.optimal_control.Start.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qpmpc_layers.optimal_control.Start.forward" title="Link to this definition">¶</a></dt>
+<dd><p>Get a blank OCP quadratic program.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#qpmpc_layers.types.QP" title="qpmpc_layers.types.qp.QP"><code class="xref py py-class docutils literal notranslate"><span class="pre">QP</span></code></a></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Quadratic program for a new OCP.</p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="qpmpc_layers.optimal_control.Step">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qpmpc_layers.optimal_control.</span></span><span class="sig-name descname"><span class="pre">Step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cost</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynamics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qpmpc_layers.optimal_control.Step" title="Link to this definition">¶</a></dt>
+<dd><p>Transition of the optimal control problem.</p>
+<p>An action step from step <span class="math notranslate nohighlight">\(k\)</span> extends the episode vector <span class="math notranslate nohighlight">\(\tau_k
+= (x_0, u_0, \ldots, x_{k-1}, u_{k-1}, x_k)\)</span> with the pair <span class="math notranslate nohighlight">\((u_k,
+x_{k+1})\)</span>, where <span class="math notranslate nohighlight">\(u_k\)</span> is the action taken at step <span class="math notranslate nohighlight">\(k\)</span> and
+<span class="math notranslate nohighlight">\(x_{k+1}\)</span> is the next state after applying transition
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Dynamics</span></code>:</p>
+<div class="math notranslate nohighlight">
+\[x_{k+1} = A x_k + B u_k\]</div>
+<p>The action step contributes a <a class="reference internal" href="#qpmpc_layers.types.StageCost" title="qpmpc_layers.types.StageCost"><code class="xref py py-class docutils literal notranslate"><span class="pre">qpmpc_layers.types.StageCost</span></code></a>
+<span class="math notranslate nohighlight">\(\ell(x_k, u_k)\)</span> of the action step to the total cost:</p>
+<div class="math notranslate nohighlight">
+\[\ell(x_k, u_k) = \frac{1}{2} x_k^T Q x_k + q^T x_k +
+\frac{1}{2} u_k^T R u_k + r^T u_k\]</div>
+<p>We can also apply a state-action inequality <code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code> to the
+step:</p>
+<div class="math notranslate nohighlight">
+\[e \leq C x_k + D u_k \leq f\]</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.optimal_control.Step.cost">
+<span class="sig-name descname"><span class="pre">cost</span></span><a class="headerlink" href="#qpmpc_layers.optimal_control.Step.cost" title="Link to this definition">¶</a></dt>
+<dd><p>Contribution of the action step to the overall optimization cost.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.optimal_control.Step.dynamics">
+<span class="sig-name descname"><span class="pre">dynamics</span></span><a class="headerlink" href="#qpmpc_layers.optimal_control.Step.dynamics" title="Link to this definition">¶</a></dt>
+<dd><p>Linear dynamics of the action step.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.optimal_control.Step.constraint">
+<span class="sig-name descname"><span class="pre">constraint</span></span><a class="headerlink" href="#qpmpc_layers.optimal_control.Step.constraint" title="Link to this definition">¶</a></dt>
+<dd><p>Optional inequality constraints on the state and action of
+the step.</p>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="qpmpc_layers.optimal_control.Step.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prev</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qpmpc_layers.optimal_control.Step.forward" title="Link to this definition">¶</a></dt>
+<dd><p>Forward calculation of the action step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>prev</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#qpmpc_layers.types.QP" title="qpmpc_layers.types.qp.QP"><code class="xref py py-class docutils literal notranslate"><span class="pre">QP</span></code></a></span>) – Quadratic program of the optimal control problem so far.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#qpmpc_layers.types.QP" title="qpmpc_layers.types.qp.QP"><code class="xref py py-class docutils literal notranslate"><span class="pre">QP</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Quadratic program of the optimal control problem with the added
+action step.</p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="qpmpc_layers.optimal_control.Terminate">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qpmpc_layers.optimal_control.</span></span><span class="sig-name descname"><span class="pre">Terminate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cost</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qpmpc_layers.optimal_control.Terminate" title="Link to this definition">¶</a></dt>
+<dd><p>Set terminal cost of an optimal control problem (OCP) graph.</p>
+<p>The terminal step adds a <a class="reference internal" href="#qpmpc_layers.types.TerminalCost" title="qpmpc_layers.types.TerminalCost"><code class="xref py py-class docutils literal notranslate"><span class="pre">qpmpc_layers.types.TerminalCost</span></code></a>
+<span class="math notranslate nohighlight">\(\ell(x_N)\)</span> based on the terminal state <span class="math notranslate nohighlight">\(x_N\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\ell(x_N) = \frac{1}{2} x_N^T Q x_N + q^T x_N\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Don’t append <a class="reference internal" href="#qpmpc_layers.optimal_control.Step" title="qpmpc_layers.optimal_control.Step"><code class="xref py py-class docutils literal notranslate"><span class="pre">Step</span></code></a> layers after this one.</p>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.optimal_control.Terminate.cost">
+<span class="sig-name descname"><span class="pre">cost</span></span><a class="headerlink" href="#qpmpc_layers.optimal_control.Terminate.cost" title="Link to this definition">¶</a></dt>
+<dd><p>Cost on the terminal state.</p>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="qpmpc_layers.optimal_control.Terminate.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prev</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qpmpc_layers.optimal_control.Terminate.forward" title="Link to this definition">¶</a></dt>
+<dd><p>Forward calculation of the terminal step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>prev</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#qpmpc_layers.types.QP" title="qpmpc_layers.types.qp.QP"><code class="xref py py-class docutils literal notranslate"><span class="pre">QP</span></code></a></span>) – Quadratic program of the optimal control problem so far.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#qpmpc_layers.types.QP" title="qpmpc_layers.types.qp.QP"><code class="xref py py-class docutils literal notranslate"><span class="pre">QP</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Quadratic program of the terminated optimal control problem.</p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="qpmpc_layers.optimal_control.Wrap">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qpmpc_layers.optimal_control.</span></span><span class="sig-name descname"><span class="pre">Wrap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_dim</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qpmpc_layers.optimal_control.Wrap" title="Link to this definition">¶</a></dt>
+<dd><p>Set the initial state constraint to complete an OCP.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="qpmpc_layers.optimal_control.Wrap.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prev</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_init</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qpmpc_layers.optimal_control.Wrap.forward" title="Link to this definition">¶</a></dt>
+<dd><p>Forward calculation of the wrapping step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prev</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#qpmpc_layers.types.QP" title="qpmpc_layers.types.qp.QP"><code class="xref py py-class docutils literal notranslate"><span class="pre">QP</span></code></a></span>) – Quadratic program of the optimal control problem so far.</p></li>
+<li><p><strong>x_init</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code></span>) – Initial state of the problem.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#qpmpc_layers.types.QP" title="qpmpc_layers.types.qp.QP"><code class="xref py py-class docutils literal notranslate"><span class="pre">QP</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Quadratic program of the completed optimal control problem.</p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl>
+</section>
+<section id="module-qpmpc_layers.lti">
+<span id="linear-time-invariant-systems"></span><h2 id="module-qpmpc_layers.lti">Linear time-invariant systems<a class="headerlink" href="#module-qpmpc_layers.lti" title="Link to this heading">¶</a></h2>
+<p>Submodule for linear time-invariant systems.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="qpmpc_layers.lti.Integrator">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qpmpc_layers.lti.</span></span><span class="sig-name descname"><span class="pre">Integrator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nb_steps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynamics</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qpmpc_layers.lti.Integrator" title="Link to this definition">¶</a></dt>
+<dd><p>Integrator for a linear time-invariant system.</p>
+<p>An integrator applies an integration scheme to system dynamics. In this
+instance: explicit Euler to linear time-invariant dynamics.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.lti.Integrator.dynamics">
+<span class="sig-name descname"><span class="pre">dynamics</span></span><a class="headerlink" href="#qpmpc_layers.lti.Integrator.dynamics" title="Link to this definition">¶</a></dt>
+<dd><p>Dynamics of the system.</p>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="qpmpc_layers.lti.Integrator.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">U</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_init</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qpmpc_layers.lti.Integrator.forward" title="Link to this definition">¶</a></dt>
+<dd><p>Forward computation performed by the module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>U</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code></span>) – Input trajectory <span class="math notranslate nohighlight">\(U_N = (u_0, \ldots, u_{N-1})\)</span>.</p></li>
+<li><p><strong>x_init</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code></span>) – Initial state <span class="math notranslate nohighlight">\(x_\mathit{init}\)</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flat state trajectory vector <span class="math notranslate nohighlight">\(X_N = [x_0 \ldots x_N]\)</span>
+resulting from integrating the input trajectory from the initial
+state.</p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="qpmpc_layers.lti.OptimalControlProblem">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qpmpc_layers.lti.</span></span><span class="sig-name descname"><span class="pre">OptimalControlProblem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nb_steps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stage_cost</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynamics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">terminal_cost</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qpmpc_layers.lti.OptimalControlProblem" title="Link to this definition">¶</a></dt>
+<dd><p>Optimal control problem for a linear time-invariant system.</p>
+<p>The cost function of our problem is the sum of
+<a class="reference internal" href="#qpmpc_layers.types.StageCost" title="qpmpc_layers.types.StageCost"><code class="xref py py-class docutils literal notranslate"><span class="pre">qpmpc_layers.types.StageCost</span></code></a>’s and a
+<a class="reference internal" href="#qpmpc_layers.types.TerminalCost" title="qpmpc_layers.types.TerminalCost"><code class="xref py py-class docutils literal notranslate"><span class="pre">qpmpc_layers.types.TerminalCost</span></code></a>:</p>
+<div class="math notranslate nohighlight">
+\[J(X_N, U_N) = \sum_{k=0}^{N-1} \ell(x_k, u_k) + \ell(x_N)\]</div>
+<p>where <span class="math notranslate nohighlight">\(X_N = (x_0, \ldots, x_N)\)</span> is the state trajectory vector and
+<span class="math notranslate nohighlight">\(U_N = (u_0, \ldots, u_{N-1})\)</span> is the input trajectory vector. Our
+overall cost is quadratic, so that the optimal control problem can be cast
+as a <a class="reference internal" href="#qpmpc_layers.types.QP" title="qpmpc_layers.types.QP"><code class="xref py py-class docutils literal notranslate"><span class="pre">qpmpc_layers.types.QP</span></code></a>.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.lti.OptimalControlProblem.constraint">
+<span class="sig-name descname"><span class="pre">constraint</span></span><a class="headerlink" href="#qpmpc_layers.lti.OptimalControlProblem.constraint" title="Link to this definition">¶</a></dt>
+<dd><p>Optional inequality constraints on the state and action of
+a step.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.lti.OptimalControlProblem.dynamics">
+<span class="sig-name descname"><span class="pre">dynamics</span></span><a class="headerlink" href="#qpmpc_layers.lti.OptimalControlProblem.dynamics" title="Link to this definition">¶</a></dt>
+<dd><p>Dynamics of the system.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.lti.OptimalControlProblem.stage_cost">
+<span class="sig-name descname"><span class="pre">stage_cost</span></span><a class="headerlink" href="#qpmpc_layers.lti.OptimalControlProblem.stage_cost" title="Link to this definition">¶</a></dt>
+<dd><p>Contribution of an action step to the overall optimization
+cost.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.lti.OptimalControlProblem.terminal_cost">
+<span class="sig-name descname"><span class="pre">terminal_cost</span></span><a class="headerlink" href="#qpmpc_layers.lti.OptimalControlProblem.terminal_cost" title="Link to this definition">¶</a></dt>
+<dd><p>Terminal-state cost.</p>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="qpmpc_layers.lti.OptimalControlProblem.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_init</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qpmpc_layers.lti.OptimalControlProblem.forward" title="Link to this definition">¶</a></dt>
+<dd><p>Forward computation performed by the module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x_init</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code></span>) – Initial state of the problem.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#qpmpc_layers.types.QP" title="qpmpc_layers.types.qp.QP"><code class="xref py py-class docutils literal notranslate"><span class="pre">QP</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QP for the OCP starting from the prescribed initial state.</p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl>
+</section>
+<section id="module-qpmpc_layers.types">
+<span id="types"></span><h2 id="module-qpmpc_layers.types">Types<a class="headerlink" href="#module-qpmpc_layers.types" title="Link to this heading">¶</a></h2>
+<p>Types defined by the library.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="qpmpc_layers.types.Constraint">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qpmpc_layers.types.</span></span><span class="sig-name descname"><span class="pre">Constraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qpmpc_layers.types.Constraint" title="Link to this definition">¶</a></dt>
+<dd><p>Inequality constraint along the optimal control problem.</p>
+<p>Inequalities are expressed as:</p>
+<div class="math notranslate nohighlight">
+\[e \leq C x_k + D u_k \leq f\]</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.Constraint.C">
+<span class="sig-name descname"><span class="pre">C</span></span><a class="headerlink" href="#qpmpc_layers.types.Constraint.C" title="Link to this definition">¶</a></dt>
+<dd><p>State constraint matrix in <span class="math notranslate nohighlight">\(C x_k\)</span>.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.Constraint.D">
+<span class="sig-name descname"><span class="pre">D</span></span><a class="headerlink" href="#qpmpc_layers.types.Constraint.D" title="Link to this definition">¶</a></dt>
+<dd><p>Input constraint matrix in <span class="math notranslate nohighlight">\(D u_k\)</span>.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.Constraint.e">
+<span class="sig-name descname"><span class="pre">e</span></span><a class="headerlink" href="#qpmpc_layers.types.Constraint.e" title="Link to this definition">¶</a></dt>
+<dd><p>Optional constraint lower bound <span class="math notranslate nohighlight">\(e\)</span> (default: no lower bound).</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.Constraint.f">
+<span class="sig-name descname"><span class="pre">f</span></span><a class="headerlink" href="#qpmpc_layers.types.Constraint.f" title="Link to this definition">¶</a></dt>
+<dd><p>Optional constraint upper bound <span class="math notranslate nohighlight">\(f\)</span> (default: no upper bound).</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="qpmpc_layers.types.Constraint.dtype">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dtype</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dtype</span></em><a class="headerlink" href="#qpmpc_layers.types.Constraint.dtype" title="Link to this definition">¶</a></dt>
+<dd><p>Get the PyTorch datatype of the constraint tensors.</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="qpmpc_layers.types.Constraint.size">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#qpmpc_layers.types.Constraint.size" title="Link to this definition">¶</a></dt>
+<dd><p>Number of inequality constraints.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="qpmpc_layers.types.Dynamics">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qpmpc_layers.types.</span></span><span class="sig-name descname"><span class="pre">Dynamics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qpmpc_layers.types.Dynamics" title="Link to this definition">¶</a></dt>
+<dd><p>Dynamics of an optimal control problem step.</p>
+<p>The dynamics of step <span class="math notranslate nohighlight">\(k\)</span> are given by:</p>
+<div class="math notranslate nohighlight">
+\[x_{k+1} = A x_k + B u_k\]</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.Dynamics.A">
+<span class="sig-name descname"><span class="pre">A</span></span><a class="headerlink" href="#qpmpc_layers.types.Dynamics.A" title="Link to this definition">¶</a></dt>
+<dd><p>State transition matrix in <span class="math notranslate nohighlight">\(A x_k\)</span>.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.Dynamics.B">
+<span class="sig-name descname"><span class="pre">B</span></span><a class="headerlink" href="#qpmpc_layers.types.Dynamics.B" title="Link to this definition">¶</a></dt>
+<dd><p>Action transition matrix in <span class="math notranslate nohighlight">\(B u_k\)</span>.</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="qpmpc_layers.types.Dynamics.dtype">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dtype</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dtype</span></em><a class="headerlink" href="#qpmpc_layers.types.Dynamics.dtype" title="Link to this definition">¶</a></dt>
+<dd><p>Get the PyTorch datatype of the dynamics step tensors.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="qpmpc_layers.types.IntegrationMap">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qpmpc_layers.types.</span></span><span class="sig-name descname"><span class="pre">IntegrationMap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Psi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qpmpc_layers.types.IntegrationMap" title="Link to this definition">¶</a></dt>
+<dd><p>Linear map from (initial state, inputs) to future state trajectory.</p>
+<p>Given the initial state <span class="math notranslate nohighlight">\(x_0\)</span> and the stacked vector of control
+inputs <span class="math notranslate nohighlight">\(U_k = (u_0, u_1, \ldots, u_{k-1})\)</span>, the state map provides
+the stacked vector <span class="math notranslate nohighlight">\(X_k = (x_0, \ldots, x_k)\)</span> of future states as:</p>
+<div class="math notranslate nohighlight">
+\[X_k = \Psi U_k + \Phi x_0\]</div>
+<p>This datastructure also maintains <span class="math notranslate nohighlight">\(\psi\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span> mapping to
+the last state in the trajectory:</p>
+<div class="math notranslate nohighlight">
+\[x_k = \psi U_k + \phi x_0\]</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.IntegrationMap.Phi">
+<span class="sig-name descname"><span class="pre">Phi</span></span><a class="headerlink" href="#qpmpc_layers.types.IntegrationMap.Phi" title="Link to this definition">¶</a></dt>
+<dd><p>Linear map from initial state to future states.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.IntegrationMap.Psi">
+<span class="sig-name descname"><span class="pre">Psi</span></span><a class="headerlink" href="#qpmpc_layers.types.IntegrationMap.Psi" title="Link to this definition">¶</a></dt>
+<dd><p>Linear map from stacked inputs to future states.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.IntegrationMap.phi">
+<span class="sig-name descname"><span class="pre">phi</span></span><a class="headerlink" href="#qpmpc_layers.types.IntegrationMap.phi" title="Link to this definition">¶</a></dt>
+<dd><p>Linear map from initial state to last state.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.IntegrationMap.psi">
+<span class="sig-name descname"><span class="pre">psi</span></span><a class="headerlink" href="#qpmpc_layers.types.IntegrationMap.psi" title="Link to this definition">¶</a></dt>
+<dd><p>Linear map from stacked inputs to last state.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="qpmpc_layers.types.QP">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qpmpc_layers.types.</span></span><span class="sig-name descname"><span class="pre">QP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qpmpc_layers.types.QP" title="Link to this definition">¶</a></dt>
+<dd><p>Quadratic program in ProxQP format.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{split}\begin{array}{ll}
+    \underset{x}{\mbox{minimize}} &amp;
+        \frac{1}{2} x^T H x + g^T x \\
+    \mbox{subject to}
+        &amp; A x = b                   \\
+        &amp; l \leq C x \leq u
+\end{array}\end{split}\end{split}\]</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.QP.H">
+<span class="sig-name descname"><span class="pre">H</span></span><a class="headerlink" href="#qpmpc_layers.types.QP.H" title="Link to this definition">¶</a></dt>
+<dd><p>Cost matrix.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.QP.g">
+<span class="sig-name descname"><span class="pre">g</span></span><a class="headerlink" href="#qpmpc_layers.types.QP.g" title="Link to this definition">¶</a></dt>
+<dd><p>Cost vector.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.QP.A">
+<span class="sig-name descname"><span class="pre">A</span></span><a class="headerlink" href="#qpmpc_layers.types.QP.A" title="Link to this definition">¶</a></dt>
+<dd><p>Equality-constraint matrix.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.QP.b">
+<span class="sig-name descname"><span class="pre">b</span></span><a class="headerlink" href="#qpmpc_layers.types.QP.b" title="Link to this definition">¶</a></dt>
+<dd><p>Equality-constraint vector.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.QP.C">
+<span class="sig-name descname"><span class="pre">C</span></span><a class="headerlink" href="#qpmpc_layers.types.QP.C" title="Link to this definition">¶</a></dt>
+<dd><p>Inequality-constraint matrix.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.QP.l">
+<span class="sig-name descname"><span class="pre">l</span></span><a class="headerlink" href="#qpmpc_layers.types.QP.l" title="Link to this definition">¶</a></dt>
+<dd><p>Inequality-constraint lower bound.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.QP.u">
+<span class="sig-name descname"><span class="pre">u</span></span><a class="headerlink" href="#qpmpc_layers.types.QP.u" title="Link to this definition">¶</a></dt>
+<dd><p>Inequality-constraint upper bound..</p>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="qpmpc_layers.types.QP.unpack">
+<span class="sig-name descname"><span class="pre">unpack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qpmpc_layers.types.QP.unpack" title="Link to this definition">¶</a></dt>
+<dd><p>Unpack dataclass as a tuple.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code>]</span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Tuple <span class="math notranslate nohighlight">\((H, g, A, b, C, l, u)\)</span> of the quadratic program.</p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="qpmpc_layers.types.StageCost">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qpmpc_layers.types.</span></span><span class="sig-name descname"><span class="pre">StageCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qpmpc_layers.types.StageCost" title="Link to this definition">¶</a></dt>
+<dd><p>Cost of a transition in the optimal control problem.</p>
+<p>The quadratic cost expression is defined by matrices <span class="math notranslate nohighlight">\((Q, R)\)</span> and
+vectors <span class="math notranslate nohighlight">\((q, r)\)</span> so that the contribution <span class="math notranslate nohighlight">\(\ell(x_k, u_k)\)</span>
+to the total cost is:</p>
+<div class="math notranslate nohighlight">
+\[\ell(x_k, u_k) = \frac{1}{2} x_k^T Q x_k + q^T x_k +
+\frac{1}{2} u_k^T R u_k + r^T u_k\]</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.StageCost.Q">
+<span class="sig-name descname"><span class="pre">Q</span></span><a class="headerlink" href="#qpmpc_layers.types.StageCost.Q" title="Link to this definition">¶</a></dt>
+<dd><p>State cost matrix in <span class="math notranslate nohighlight">\(x_k^T Q x_k\)</span>.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.StageCost.R">
+<span class="sig-name descname"><span class="pre">R</span></span><a class="headerlink" href="#qpmpc_layers.types.StageCost.R" title="Link to this definition">¶</a></dt>
+<dd><p>Action cost matrix in <span class="math notranslate nohighlight">\(u_k^T R u_k\)</span>.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.StageCost.q">
+<span class="sig-name descname"><span class="pre">q</span></span><a class="headerlink" href="#qpmpc_layers.types.StageCost.q" title="Link to this definition">¶</a></dt>
+<dd><p>Optional state cost vector in <span class="math notranslate nohighlight">\(q^T x_k\)</span> (default: zero).</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.StageCost.r">
+<span class="sig-name descname"><span class="pre">r</span></span><a class="headerlink" href="#qpmpc_layers.types.StageCost.r" title="Link to this definition">¶</a></dt>
+<dd><p>Optional action cost vector in <span class="math notranslate nohighlight">\(r^T u_k\)</span> (default: zero).</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="qpmpc_layers.types.StageCost.dtype">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dtype</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dtype</span></em><a class="headerlink" href="#qpmpc_layers.types.StageCost.dtype" title="Link to this definition">¶</a></dt>
+<dd><p>Get the PyTorch datatype of the stage cost tensors.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="qpmpc_layers.types.TerminalCost">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qpmpc_layers.types.</span></span><span class="sig-name descname"><span class="pre">TerminalCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qpmpc_layers.types.TerminalCost" title="Link to this definition">¶</a></dt>
+<dd><p>Cost on the last state of the optimal control problem.</p>
+<p>The quadratic cost expression is defined by matrix <span class="math notranslate nohighlight">\(Q\)</span> and
+vector <span class="math notranslate nohighlight">\(q\)</span> so that the cost <span class="math notranslate nohighlight">\(\ell(x_k)\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[\ell(x_k) = \frac{1}{2} x_k^T Q x_k + q^T x_k\]</div>
+<p>where <span class="math notranslate nohighlight">\(k\)</span> is the index of the last step in the optimal control
+problem.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.TerminalCost.Q">
+<span class="sig-name descname"><span class="pre">Q</span></span><a class="headerlink" href="#qpmpc_layers.types.TerminalCost.Q" title="Link to this definition">¶</a></dt>
+<dd><p>State cost matrix in <span class="math notranslate nohighlight">\(x_k^T Q x_k\)</span>.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qpmpc_layers.types.TerminalCost.q">
+<span class="sig-name descname"><span class="pre">q</span></span><a class="headerlink" href="#qpmpc_layers.types.TerminalCost.q" title="Link to this definition">¶</a></dt>
+<dd><p>Optional state cost vector in <span class="math notranslate nohighlight">\(q^T x_k\)</span> (default: zero).</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="qpmpc_layers.types.TerminalCost.dtype">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dtype</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dtype</span></em><a class="headerlink" href="#qpmpc_layers.types.TerminalCost.dtype" title="Link to this definition">¶</a></dt>
+<dd><p>Get the PyTorch datatype of the terminal cost tensors.</p>
+</dd></dl>
+</dd></dl>
+</section>
+</section>
+
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="layers.html" title="Layers"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span
+                      class="md-footer-nav__direction"> "Previous" </span> Layers </span>
+              </div>
+            </a>
+          
+          
+            <a href="developer-notes.html" title="Developer notes"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
+                class="md-flex__ellipsis"> <span
+                class="md-footer-nav__direction"> "Next" </span> Developer notes </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink"><i
+                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2022-2025 Stéphane Caron and the qpmpc contributors.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>
