@@ -9,5 +9,5 @@ Expect breaking changes and missing features, but feel also free to join the dis
 
 ## Development
 
-- Checking unit tests: ``pixi run test``
+- Checking unit tests: ``pixi run -e py310 test``
 - Building and opening the documentation locally: ``pixi run docs-open``
