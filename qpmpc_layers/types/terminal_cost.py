@@ -58,5 +58,6 @@ class TerminalCost:
 
     @property
     def dtype(self) -> torch.dtype:
+        """Get the PyTorch datatype of the terminal cost tensors."""
         check_dtypes(self, ["Q", "q"])
         return self.Q.dtype
