@@ -59,6 +59,7 @@ coverage-open = { cmd = "xdg-open htmlcov/index.html", depends-on = "coverage" }
 coveralls = { cmd = "coveralls --service=github", depends-on = "coverage" }
 
 [tool.pixi.feature.docs.dependencies]
+graphviz = "*"
 sphinx = ">=8.0.0"
 sphinx-autodoc-typehints = "*"
 
