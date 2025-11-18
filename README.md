@@ -1,7 +1,7 @@
 # qpmpc\_layers
 
 [![CI](https://img.shields.io/github/actions/workflow/status/stephane-caron/qpmpc_layers/ci.yml?branch=main)](https://github.com/stephane-caron/qpmpc_layers/actions)
-[![Documentation](https://img.shields.io/badge/docs-online-brightgreen?style=flat)](https://scaron.info/doc/qpmpc_layers/)
+[![Documentation](https://img.shields.io/badge/docs-online-brightgreen?style=flat)](https://stephane-caron.github.io/qpmpc_layers/)
 [![Coverage](https://coveralls.io/repos/github/stephane-caron/qpmpc_layers/badge.svg?branch=main)](https://coveralls.io/github/stephane-caron/qpmpc_layers?branch=main)
 [![PyPI version](https://img.shields.io/pypi/v/qpmpc_layers)](https://pypi.org/project/qpmpc_layers/0.6.0/)
 
