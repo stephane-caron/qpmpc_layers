@@ -30,19 +30,6 @@ dependencies = [
 ]
 keywords = ["differentiable", "model", "predictive", "control", "linear", "time-varying"]
 
-[project.optional-dependencies]
-coverage = [
-    "pytest-cov",
-]
-docs = [
-    "sphinx >= 8.0.0",
-    "sphinx-autodoc-typehints",
-    "sphinx-material",
-    "sphinx-mathjax-offline",
-]
-lint = ["ruff"]
-test = ["pytest"]
-
 [build-system]
 requires = ["flit_core >=2,<4"]
 build-backend = "flit_core.buildapi"
@@ -61,14 +48,29 @@ valmix = "*"
 [tool.pixi.pypi-dependencies]
 qpmpc_layers = { path = ".", editable = true }
 
+[tool.pixi.feature.coverage.dependencies]
+pytest = "*"
+pytest-cov = "*"
+
 [tool.pixi.feature.coverage.tasks]
 coverage = "pytest --cov=qpmpc_layers --cov-report=html"
-coverageopen = { cmd = "xdg-open htmlcov/index.html", depends-on = "coverage" }
+coverage-open = { cmd = "xdg-open htmlcov/index.html", depends-on = "coverage" }
+
+[tool.pixi.feature.docs.dependencies]
+sphinx = ">=8.0.0"
+sphinx-autodoc-typehints = "*"
+
+[tool.pixi.feature.docs.pypi-dependencies]
+sphinx-material = "*"
+sphinx-mathjax-offline = "*"
 
 [tool.pixi.feature.docs.tasks]
 figures = "cd docs && make"
 docs = { cmd = "sphinx-build docs/ docs/_build -W", depends-on = "figures" }
-docsopen = { cmd = "xdg-open docs/_build/index.html", depends-on = "docs" }
+docs-open = { cmd = "xdg-open docs/_build/index.html", depends-on = "docs" }
+
+[tool.pixi.feature.lint.dependencies]
+ruff = "*"
 
 [tool.pixi.feature.lint.tasks]
 lint = "ruff check qpmpc_layers"
@@ -78,6 +80,9 @@ pixi-pack = "*"
 
 [tool.pixi.feature.pack.tasks]
 pack-to-aarch64 = "pixi-pack pack -e default --platform linux-aarch64 --ignore-pypi-non-wheel"
+
+[tool.pixi.feature.test.dependencies]
+pytest = "*"
 
 [tool.pixi.feature.test.tasks]
 test = "pytest ."
@@ -94,7 +99,11 @@ test = { features = ["test"], solve-group = "default" }
 line-length = 79
 
 [tool.ruff.lint]
-lint.select = [
+ignore = [
+    "D401",  # good for methods but not for class docstrings
+    "D405",  # British-style section names are also "proper"!
+]
+select = [
     # pyflakes
     "F",
     # pycodestyle
@@ -104,10 +113,6 @@ lint.select = [
     "I001",
     # pydocstyle
     "D"
-]
-ignore = [
-    "D401",  # good for methods but not for class docstrings
-    "D405",  # British-style section names are also "proper"!
 ]
 
 [tool.ruff.lint.pydocstyle]

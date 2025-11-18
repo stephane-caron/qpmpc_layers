@@ -10,4 +10,4 @@ Expect breaking changes and missing features, but feel also free to join the dis
 ## Development
 
 - Checking unit tests: ``pixi run test``
-- Building and opening the documentation locally: ``pixi run docsopen``
+- Building and opening the documentation locally: ``pixi run docs-open``
