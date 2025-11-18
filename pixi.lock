@@ -4880,7 +4880,7 @@ packages:
 - pypi: ./
   name: qpmpc-layers
   version: 0.0.1
-  sha256: c5e6822fdcecfacc29ec65fdb794eb8bf86c7a66616061d8069da113e0de2899
+  sha256: 0f88bc1c9423642fe988e3ea9c5fc2e887711a93d8b9f001f37203c3dbf60562
   requires_dist:
   - proxsuite>=0.6.1
   - qpsolvers>=1.8.0
