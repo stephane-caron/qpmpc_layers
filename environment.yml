@@ -1,7 +1,0 @@
-name: qpmpc_layers
-channels:
-    - conda-forge
-dependencies:
-    - proxsuite >=0.6.1
-    - pytorch >=2.4.1
-    - valmix
