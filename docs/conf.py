@@ -101,8 +101,8 @@ html_theme_options = {
         {"href": "module", "internal": True, "title": "Module"},
         {"href": "usage", "internal": True, "title": "Usage"},
     ],
-    "repo_url": "https://github.com/stephane-caron/qpmpc/",
-    "repo_name": "qpmpc",
+    "repo_url": "https://github.com/stephane-caron/qpmpc_layers/",
+    "repo_name": "qpmpc_layers",
 }
 
 # Fixes the warning "cannot cache unpickable configuration value"
